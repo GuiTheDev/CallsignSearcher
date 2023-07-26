@@ -1,4 +1,4 @@
-<script>
+<script lang=ts>
   
     let visible = false;
     let formData = {
@@ -9,14 +9,16 @@
     let iatacode = [String]
     let icaocode = [String]
     let airlinename = [String]
+    let searchresults: Number
     function toggleVissible() {
         visible = true
     }
 
-
     const submitForm = () => {
         console.log("Your form data =>", formData)
         fetch("https://guithedev.pythonanywhere.com/getAirline?" + new URLSearchParams({
+            iata: formData.iata,
+            icao: formData.icao,
             airline: formData.name
         }))
         .then(response => response.json())
@@ -25,6 +27,7 @@
                 airlinename = data[0][1]
                 icaocode = data[0][2]
                 iatacode = data[0][0]
+                searchresults = data.length;
             toggleVissible()
         }).catch(error => {
             console.log(error)
@@ -61,7 +64,7 @@
         </div>
     {#if visible}
         <div class="aresults">
-            <h3 style="text-align: center">Found x results</h3>
+            <h3 style="text-align: center">Found {searchresults} results</h3>
             <div class="results">
                 <h3>Airline Name: {airlinename}</h3>
                 <h3>ICAO: {icaocode}</h3>
