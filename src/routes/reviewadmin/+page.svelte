@@ -8,6 +8,8 @@
 
     let id = ''
     let resp = [String]
+    let youcanshow = false
+    let login = false
 
     const submitForm = () => {
         fetch("https://web-production-c91a.up.railway.app/gettobeadded?" + new URLSearchParams({
@@ -18,9 +20,11 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                
 
                 if (data.sucess == false) {
                     console.log("Your are not an admin my friend")
+                    login = false
                     return []
                 }
 
@@ -28,6 +32,8 @@
                 console.log(id)
                 resp = data
                 visible = true
+                login = true
+                youcanshow = true
                 
                 
             }).catch(error => {
@@ -59,6 +65,7 @@
             .then(data => {
                 console.log(data)
                 submitForm()
+                login = true
                 
                 
                 
@@ -87,6 +94,16 @@
                 <button class="btn btn-primary" type="submit" on:click={submitForm}>Login</button>  
         </div>
         <br>
+        {#if youcanshow}
+
+            {#if login}
+                <div class="alert alert-success" role="alert">Successfully logged in</div>
+            {/if}
+            
+            {#if !login}
+                <div class="alert alert-danger" role="alert">Unable to Login, invalid credentials</div>
+            {/if}
+        {/if}
         {#if visible}
             <ul class="list-group">
                 {#each resp as name, index}
