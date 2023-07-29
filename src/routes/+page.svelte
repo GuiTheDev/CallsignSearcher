@@ -6,17 +6,23 @@
         iata: '',
         name: '',
     }
+    let nvisible = false
     let iatacode = [String]
     let icaocode = [String]
     let airlinename = [String]
     let searchresults: Number
+    let moredata: [String]
     function toggleVissible() {
         visible = true
     }
 
+    function toggleNVis() {
+        nvisible = true
+    }
+
     const submitForm = () => {
         console.log("Your form data =>", formData)
-        fetch("https://guithedev.pythonanywhere.com/getAirline?" + new URLSearchParams({
+        fetch("https://web-production-c91a.up.railway.app/getAirline?" + new URLSearchParams({
             iata: formData.iata,
             icao: formData.icao,
             airline: formData.name
@@ -24,17 +30,19 @@
         .then(response => response.json())
         .then(data => {
             console.log(data)
+                moredata = data
+                searchresults = data.length;
                 airlinename = data[0][1]
                 icaocode = data[0][2]
                 iatacode = data[0][0]
-                searchresults = data.length;
             toggleVissible()
         }).catch(error => {
             console.log(error)
             return [];
         })
 
-    }   
+    }
+    
 </script>
 
 
@@ -62,16 +70,21 @@
                 <button on:click={submitForm} class="btn btn-primary" type="submit">Search!</button>
             </form>
         </div>
-    {#if visible}
         <div class="aresults">
+            {#if nvisible}
+                <h3 style="text-align: center">No results found</h3>
+            {/if}
+        {#if visible}
             <h3 style="text-align: center">Found {searchresults} results</h3>
             <div class="results">
                 <h3>Airline Name: {airlinename}</h3>
                 <h3>ICAO: {icaocode}</h3>
                 <h3>IATA: {iatacode}</h3>
             </div>
+        {/if}
+
+        <a href="/request"><p class="form-label cantfind " style="align-text: center">Can't find a callsign? Maybe we don't have it, you can request to add one here!</p></a>
         </div>
-    {/if}
 </pagebody>
 
 
@@ -99,5 +112,11 @@
     }
     .aresults {
         padding-top: 15px;
+    }
+    .cantfind {
+        margin:auto;
+        width: 50%;
+        padding: 10px;
+        padding-top: 5px;
     }
 </style>
