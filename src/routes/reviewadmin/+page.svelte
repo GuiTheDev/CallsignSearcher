@@ -24,7 +24,8 @@
                     return []
                 }
 
-                id = data[0][3]
+                id = data
+                console.log(id)
                 resp = data
                 visible = true
                 
@@ -38,6 +39,7 @@
 
     const alter = (index:string, approved:boolean) => {
         let operation = ''
+        console.log(index)
         if (approved == true) {
             operation = 'add'
         }
@@ -90,8 +92,8 @@
                 {#each resp as name, index}
                     <li class="list-group-item">{index} - {name}</li>
                     
-                    <button type="button" class="btn btn-success sep" on:click={() => alter((id).toString(), true)}>Approve</button>
-                    <button type="button" class="btn btn-danger sep" on:click={() => alter((id).toString(), false)}>Remove</button>
+                    <button type="button" class="btn btn-success sep" on:click={() => alter((name[3]).toString(), true)}>Approve</button>
+                    <button type="button" class="btn btn-danger sep" on:click={() => alter((name[3]).toString(), false)}>Remove</button>
                 
                 {/each}
             </ul>
