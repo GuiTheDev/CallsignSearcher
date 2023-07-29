@@ -6,6 +6,7 @@
        password: ''
     }
 
+    let id = ''
     let resp = [String]
 
     const submitForm = () => {
@@ -23,6 +24,7 @@
                     return []
                 }
 
+                id = data[0][3]
                 resp = data
                 visible = true
                 
@@ -88,8 +90,8 @@
                 {#each resp as name, index}
                     <li class="list-group-item">{index} - {name}</li>
                     
-                    <button type="button" class="btn btn-success sep" on:click={() => alter((1+index).toString(), true)}>Approve</button>
-                    <button type="button" class="btn btn-danger sep" on:click={() => alter((1+index).toString(), false)}>Remove</button>
+                    <button type="button" class="btn btn-success sep" on:click={() => alter((id).toString(), true)}>Approve</button>
+                    <button type="button" class="btn btn-danger sep" on:click={() => alter((id).toString(), false)}>Remove</button>
                 
                 {/each}
             </ul>
