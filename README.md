@@ -13,8 +13,6 @@
     <a href="https://github.com/GuiTheDev/CallsignSearcher"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/GuiTheDev/CallsignSearcher">View Demo</a>
-    .
     <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Report Bug</a>
     .
     <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Request Feature</a>
