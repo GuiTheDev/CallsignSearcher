@@ -1,18 +1,13 @@
 <br/>
 <p align="center">
   <a href="https://github.com/GuiTheDev/CallsignSearcher">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://cdn.discordapp.com/attachments/1012148384443940925/1136244695383674891/logo-no-background.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">CallsignSearcher</h3>
+  <br>
+  <a href="callsignsearcher.xyz">View Demo</a>
 
   <p align="center">
     Search or request a aviation callsign here!
-    <br/>
-    <br/>
-    <a href="https://github.com/GuiTheDev/CallsignSearcher"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
     <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Report Bug</a>
     .
     <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Request Feature</a>
@@ -23,14 +18,13 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](https://cdn.discordapp.com/attachments/1012148384443940925/1136244357784158268/image.png)
 
 
 ## Built With
 
 This was built with SvelteKit
 
-### Creating A Pull Request
 
 
 
@@ -40,7 +34,7 @@ Distributed under the GNU License. See [LICENSE](https://github.com/GuiTheDev/Ca
 
 ## Authors
 
-* **GuiTheDev** - *Independent Developer* - [GuiTheDev](https://github.com/GuiTheDev/) - *Execution of Project and main idea*
+* **[GuiTheDev](https://github.com/GuiTheDev/) ** - *Independent Developer*  - *Execution of Project and main idea*
 
 ## Acknowledgements
 
