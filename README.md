@@ -1,38 +1,43 @@
-# create-svelte
+<br/>
+<p align="center">
+  <a href="https://github.com/GuiTheDev/CallsignSearcher">
+    <img src="https://cdn.discordapp.com/attachments/1012148384443940925/1136244695383674891/logo-no-background.png" alt="Logo" width="1000" height="70">
+  </a>
+  <br>
+  <a href="callsignsearcher.xyz">View Demo</a>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+  <p align="center">
+    Search or request a aviation callsign here!
+    <br>
+    <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Report Bug</a>
+    .
+    <a href="https://github.com/GuiTheDev/CallsignSearcher/issues">Request Feature</a>
+  </p>
+</p>
 
-## Creating a project
+![Downloads](https://img.shields.io/github/downloads/GuiTheDev/CallsignSearcher/total) ![Contributors](https://img.shields.io/github/contributors/GuiTheDev/CallsignSearcher?color=dark-green) ![Issues](https://img.shields.io/github/issues/GuiTheDev/CallsignSearcher) ![License](https://img.shields.io/github/license/GuiTheDev/CallsignSearcher) 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## About The Project
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Built with Svelte for Frontend and Python for Backend this website lets you search a callsign by any code or name, for an airline, in our database. If we don't have
+it in our database you can request it, and we would appreciate that very much!
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+![Screen Shot](https://cdn.discordapp.com/attachments/1012148384443940925/1136244357784158268/image.png)
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Built With
 
-```bash
-npm run dev
+This was built with SvelteKit
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
 
-## Building
+## License
 
-To create a production version of your app:
+Distributed under the GNU License. See [LICENSE](https://github.com/GuiTheDev/CallsignSearcher/blob/main/LICENSE) for more information.
 
-```bash
-npm run build
-```
+## Authors
 
-You can preview the production build with `npm run preview`.
+* **[GuiTheDev](https://github.com/GuiTheDev/) ** - *Independent Developer*  - *Execution of Project and main idea*
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Acknowledgements
+
+* [FalcoN1777](https://github.com/FalcoN1777/)
